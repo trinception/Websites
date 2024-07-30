@@ -1,0 +1,186 @@
+
+import Image from "next/image";
+import Link from 'next/link';
+
+import styles from "./page.module.css";
+
+export default function Home() {
+  return (
+    <main className={styles.main}>
+
+        <div className={styles.navContainer}>
+
+          <nav>
+            <ul className={styles.navBar}>
+
+              <li >
+
+                <Link href="/" data-item='Home'>
+                  <Image
+                    src="/h.svg"
+                    alt="Trinity Evans"
+                    className={styles.nameLogo}
+                    width={70}
+                    height={45}
+                    priority
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link className={styles.listItem} href="/projects" data-item='Projects'>Projects</Link>
+              </li>
+
+              <li>
+                <Link className={styles.listItem} href="/about" data-item='About'>About</Link>
+              </li>
+
+            </ul>
+          </nav>
+
+          <label className={styles.styleToggle}>
+
+              <div className={styles.toggle}>
+                  <input className={styles.toggleState} type="checkbox" name="check" value="check"/>
+                  <div className={styles.indicator}></div>
+              </div>
+
+          </label>
+        </div>
+        <div className={styles.bannerContainer}>
+
+          <div className={styles.section}>
+
+            <div className={styles.projectBlurb}>
+
+              <div className={styles.desc}>
+                <p> <a className={styles.title}>&#128187; </a><a className={styles.nameIcon}>Projects</a> <br />
+                This is a glimpse of my work. Only my portfolio sites are on my <span className={styles.wordHighlightSubtle}>GitHub</span>.
+                For any specific inquiries on projects, <span className={styles.wordHighlightSubtle}>Contact Me</span>.</p>
+              </div>
+
+              <div className={styles.imageContainer}>
+                <img src="./imgs/h-8.png" alt="computer" title="Trinception" width="400" height="auto"/>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.gradientBG}>
+          <div className={styles.projectSection}>
+
+
+            <ul className={styles.grid}>
+              <div className={styles.card}>
+
+                  <div className="project1">
+                    <h2>Portfolio Websites</h2>
+                    <h4>Language(s): HTML,CSS, JS</h4>
+                    <h4>Library(s): React, Bootstrap</h4>
+                  </div>
+
+              </div>
+
+              <div className={styles.card}>
+
+                <div className="project1">
+                  <h2>Book Recommendation System & Library Database</h2>
+                  <h4>Language(s): Python</h4>
+                  <h4>Data source(s): Amazon API, Goodreads API</h4>
+                </div>
+
+
+              </div>
+
+              <div className={styles.card}>
+
+                  <div className="project1">
+                    <h2>(Research) Motion Style Transfer and the ContEgo Salsa Dataset</h2>
+                    <p></p>
+                  </div>
+
+              </div>
+
+              <div className={styles.card}>
+
+                  <div className="project1">
+                    <h2>Multiplayer gaming website</h2>
+                    <p></p>
+                  </div>
+
+              </div>
+
+              <div className={styles.card}>
+
+                  <div className="project1">
+                    <h2>Map navigation system</h2>
+                    <p></p>
+                  </div>
+
+              </div>
+
+              <div className={styles.card}>
+
+                  <div className="project1">
+                    <h2>PortfolioGPT</h2>
+                    <p></p>
+                  </div>
+
+              </div>
+
+              <div className={styles.card}>
+
+                  <div className="project1">
+                    <h2>Lockdown Python Scraper</h2>
+                    <p></p>
+                  </div>
+
+              </div>
+
+              <div className={styles.card}>
+
+                  <div className="project1">
+                    <h2>Multi-level 2D Platform Game "Atmosphere"</h2>
+                    <p></p>
+                  </div>
+
+              </div>
+
+            </ul>
+
+            <ul className={styles.wrapper}>
+
+                <li className={styles.icon}>
+                  <button className={styles.btn}>
+                    <svg width="40" height="40" fill="#0092E4" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="github">
+                      <path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"></path>
+                    </svg>
+                   </button>
+                 </li>
+                 <li className={styles.icon}>
+                    <button className={styles.btn}>
+                      <a>See More...</a>
+                    </button>
+                  </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className={styles.footerContainer}>
+
+          <div className={styles.footer}>
+
+              <div className={styles.aboutBlurb}>
+                <p className={styles.wordHighlightPassion}>Hello There!</p>
+                <p>trinityevansphoto@gmail.com</p>
+                <p>This website is best viewed on desktop</p>
+                <p>Made by Trinity Evans </p>
+              </div>
+
+          </div>
+        </div>
+
+  </main>
+);
+}

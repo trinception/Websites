@@ -1,0 +1,144 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.aboutBlurb {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, auto));
+  max-width: 100%;
+  width: var(--max-width);
+}
+
+.footerContainer {
+  width:100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: var(--dimension);
+  gap: 50px;
+  padding: 60px;
+}
+
+.footer{
+  background: var(--dimension);
+  align-items: center;
+  justify-content: center;
+  width:928px;
+}
+
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: var(--background-start-rgb);
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  box-shadow: -8px -4px 8px 0px var(--background-end-rgb),
+    8px 4px 12px 0px var(--shadow);
+}
+
+.listItem {
+
+      margin: 2em;
+      display: table;
+      margin-left: 5px;
+      margin-right: 5px;
+      border-radius: 10px;
+      border: none;
+}
+
+.listItem:hover{
+      box-shadow: inset 10px 10px 10px -1px rgba(197,197,197,0.2),
+            inset -10px -10px 10px -1px rgba(255,255,255,0.7),
+            -0.5px -0.5px 0px rgba(255,255,255,1),
+            0.5px 0.5px 0px rgba(197,197,197,0.15),
+            0px 12px 10px -10px rgba(197,197,197,0.05);
+      border: 1px solid rgba(197,197,197,0.1);
+
+      transition: all 0.5s;
+      transform: translateY(1px);
+}
+
+.listItem a{
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.nameLogo{
+  margin: 1em;
+  display: table;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius: 0px;
+  border: none;
+}
+
+.navBar{
+      position:fixed;
+      display:grid;
+      grid-auto-flow: column;
+      list-style: none;
+      text-decoration: none;
+      column-gap: 1.5em;
+      align-items: center;
+      top:3em;
+      left:2em;
+      margin:0px;
+      background: var(--background-end-rgb);
+      box-shadow:  10px 10px 20px -10px var(--shadow),
+                 -10px -10px 20px -1px var(--background-end-rgb);
+      padding: 0px 32px;
+      border-radius: 4rem;
+}
+
+.navContainer {
+      display: flex;
+      text-align: center;
+      width:100%;
+      padding-bottom: 100px;
+
+}
+
+.styleToggle {
+      position:fixed;
+      top:5em;
+      right: 5em;
+      margin:0px;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      color: var(--text1);
+
+}
+
+.styleToggle-text {
+  margin-left: 16px;
+}
+
+.toggle {
+  position: fixed;
+  top:4em;
+  right: 3em;
+  isolation: isolate;
+
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: -8px -4px 8px 0px var(--background-end-rgb),
+    8px 4px 12px 0px var(--shadow),
+    4px 4px 4px 0px var(--shadow) inset,
+    -4px -4px 4px 0px var(--background-end-rgb) inset;
+}
+
+.toggleState {
+  display: none;
+}
+
+.toggleState:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+}
