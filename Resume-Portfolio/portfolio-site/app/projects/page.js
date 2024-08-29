@@ -8,50 +8,52 @@ export default function Home() {
   return (
     <main className={styles.main}>
 
-        <div className={styles.navContainer}>
+    <div className={styles.navContainer}>
 
-          <nav>
-            <ul className={styles.navBar}>
+      <nav>
+        <ul className={styles.navBar}>
 
-              <li >
+          <li >
+            <Link className={styles.listItem} href="/" data-item='Home'>Home</Link>
+          </li>
 
-                <Link href="/" data-item='Home'>
-                  <Image
-                    src="/h.svg"
-                    alt="Trinity Evans"
-                    className={styles.nameLogo}
-                    width={70}
-                    height={45}
-                    priority
-                  />
-                </Link>
-              </li>
+          <li>
+            <Link className={styles.current} href="/projects" data-item='Projects'>Projects</Link>
+          </li>
 
-              <li>
-                <Link className={styles.listItem} href="/projects" data-item='Projects'>Projects</Link>
-              </li>
+          <li>
+            <Link className={styles.listItem} href="/about" data-item='About'>About</Link>
+          </li>
 
-              <li>
-                <Link className={styles.listItem} href="/about" data-item='About'>About</Link>
-              </li>
+        </ul>
+      </nav>
+      <div className={styles.upperCorner}>
 
-            </ul>
-          </nav>
+            <div>
+              <Link href="/" data-item='Home'>
+                <Image
+                  src="/h.svg"
+                  alt="Trinity Evans"
+                  className={styles.nameLogo}
+                  width={70}
+                  height={45}
+                  priority
+                />
+              </Link>
+            </div>
 
-          <label className={styles.styleToggle}>
 
-              <div className={styles.toggle}>
-                  <input className={styles.toggleState} type="checkbox" name="check" value="check"/>
-                  <div className={styles.indicator}></div>
-              </div>
-
-          </label>
-        </div>
+      </div>
+    </div>
         <div className={styles.bannerContainer}>
 
           <div className={styles.section}>
 
             <div className={styles.projectBlurb}>
+
+              <div className={styles.imageContainer}>
+                <img src="./imgs/h-8.png" alt="computer" title="Trinception" width="100%" height="100%"/>
+              </div>
 
               <div className={styles.desc}>
                 <p> <a className={styles.title}>&#128187; </a><a className={styles.nameIcon}>Projects</a> <br />
@@ -59,9 +61,7 @@ export default function Home() {
                 For any specific inquiries on projects, <span className={styles.wordHighlightSubtle}>Contact Me</span>.</p>
               </div>
 
-              <div className={styles.imageContainer}>
-                <img src="./imgs/h-8.png" alt="computer" title="Trinception" width="400" height="auto"/>
-              </div>
+
 
             </div>
           </div>
@@ -72,80 +72,134 @@ export default function Home() {
 
 
             <ul className={styles.grid}>
-              <div className={styles.card}>
-
-                  <div className="project1">
-                    <h2>Portfolio Websites</h2>
-                    <h4>Language(s): HTML,CSS, JS</h4>
-                    <h4>Library(s): React, Bootstrap</h4>
-                  </div>
-
-              </div>
-
-              <div className={styles.card}>
-
-                <div className="project1">
-                  <h2>Book Recommendation System & Library Database</h2>
-                  <h4>Language(s): Python</h4>
-                  <h4>Data source(s): Amazon API, Goodreads API</h4>
-                </div>
 
 
-              </div>
+              <li className={styles.card}>
 
-              <div className={styles.card}>
-
-                  <div className="project1">
-                    <h2>(Research) Motion Style Transfer and the ContEgo Salsa Dataset</h2>
-                    <p></p>
-                  </div>
-
-              </div>
-
-              <div className={styles.card}>
-
-                  <div className="project1">
-                    <h2>Multiplayer gaming website</h2>
-                    <p></p>
-                  </div>
-
-              </div>
-
-              <div className={styles.card}>
-
-                  <div className="project1">
+                  <div className={styles.project1}>
                     <h2>Map navigation system</h2>
                     <p></p>
                   </div>
 
-              </div>
+              </li>
 
-              <div className={styles.card}>
+              <li className={styles.card}>
 
-                  <div className="project1">
+                  <div className={styles.project1}>
                     <h2>PortfolioGPT</h2>
                     <p></p>
                   </div>
 
-              </div>
+              </li>
 
-              <div className={styles.card}>
+              <li className={styles.card}>
 
-                  <div className="project1">
+                  <div className={styles.project1}>
                     <h2>Lockdown Python Scraper</h2>
                     <p></p>
                   </div>
 
-              </div>
+              </li>
 
-              <div className={styles.card}>
+              <li className={styles.card}>
 
-                  <div className="project1">
+                  <div className={styles.project1}>
                     <h2>Multi-level 2D Platform Game "Atmosphere"</h2>
                     <p></p>
                   </div>
 
-              </div>
+              </li>
+              <li className={styles.card}>
+
+                  <div className={styles.project1}>
+                    <h2>Portfolio Websites</h2>
+                    <h4><a className={styles.bold}>Languages:</a> HTML, CSS, JS, PHP</h4>
+                    <h4><a className={styles.bold}>Technologies:</a> NextJS, React, Bootstrap</h4>
+                    <p className={styles.projectDescription}> Built my portfolio website from scratch. Includes interactive, dynamic elements, and a variety of unique features and easter eggs such as an AI chatbot.</p>
+
+                  </div>
+
+                  <div className={styles.expand}>
+                    <div className={styles.seeMore}>
+                      <strong>Read more...</strong>
+                      <a className={styles.arrow}>&#709;</a>
+                    </div>
+                  </div>
+
+              </li>
+
+              <li className={styles.card}>
+
+                <div className={styles.project1}>
+                  <h2>Book Recommendation System</h2>
+                  <h4><a className={styles.bold}>Language(s):</a> Python</h4>
+                  <h4><a className={styles.bold}>Data source(s):</a> Amazon API, Goodreads API</h4>
+                  <p className={styles.projectDescription}>Developed a collaborative filtering recommendation system in Python, leveraging existing book  rating databases, processed using Pandas, and implementing </p>
+                </div>
+
+                <div className={styles.expand}>
+                  <div className={styles.seeMore}>
+                    <strong>Read more...</strong>
+                    <a className={styles.arrow}>&#709;</a>
+                  </div>
+                </div>
+
+                <span className={styles.viewMore}> a user database using SQL. Currently enhancing the
+                  project by creating a web-based front-end to offer users more interactive features.</span>
+
+              </li>
+
+              <li className={styles.card}>
+
+
+                  <div className={styles.project1}>
+                    <h2>(Research) The ContEgo Salsa Dataset</h2>
+                    <p className={styles.projectDescription}>
+                    Co-authored motion capture dataset of salsa dancers from various levels (beginner, intermediate, professional) improvising over a </p>
+                  </div>
+
+                  <div className={styles.expand}>
+                    <div className={styles.seeMore}>
+                      <strong>Read more...</strong>
+                      <a className={styles.arrow}>&#709;</a>
+                    </div>
+                  </div>
+                  <span className={styles.viewMore}>variety of different music styles and tempos.
+                  <br/>
+                  <a className={styles.bold}>Current uses:</a> Training ML Motion Style Transfer algorithms for use in technologies such as generative AI.
+                  <br/>
+                  <a className={styles.bold}>Potential uses/applications:</a> Gaming, TV, & Movies (generating realistic CGI character movement), Dance training and evaluation, etc.
+                  <br/>
+                  <a className={styles.bold}>About my role:</a> Co-author. Set up and calibrated our motion capture lab space, managed software migration and maintained our usage of the most modern software possible, perfected our data collection pipeline, ran participant recruitment and scheduling, and performed the actual data collection.</span>
+
+
+              </li>
+
+              <li className={styles.card}>
+
+                  <div className={styles.project1}>
+                    <h2>Multi-user gaming site</h2>
+                    <h4><a className={styles.bold}>Languages:</a> HTML, CSS, JavaScript, SQL</h4>
+                    <h4><a className={styles.bold}>Technologies:</a> Heroku, Socket.io, NodeJS, PostGreSQL</h4>
+                    <p className={styles.projectDescription}>Developed a full stack web-based racing game application allowing users to create profiles, add friends,
+                      engage in real-time chat, and compete against
+                      </p>
+                  </div>
+
+                  <div className={styles.expand}>
+                    <div className={styles.seeMore}>
+                      <strong>Read more...</strong>
+                      <a className={styles.arrow}>&#709;</a>
+                    </div>
+                  </div>
+
+                  <span className={styles.viewMore}>
+                   each other. Implemented using JavaScript for frontend interactivity, HTML/CSS for styling, Node.js for server-side logic, PostgreSQL for database management, and
+                  Socket.IO for real-time communication. Successfully integrated multiple technologies to deliver an immersive
+                  gaming experience with social interaction features.
+                  </span>
+
+              </li>
 
             </ul>
 
@@ -158,26 +212,39 @@ export default function Home() {
                     </svg>
                    </button>
                  </li>
-                 <li className={styles.icon}>
-                    <button className={styles.btn}>
-                      <a>See More...</a>
-                    </button>
-                  </li>
             </ul>
           </div>
         </div>
 
         <div className={styles.footerContainer}>
+          <div className={styles.footerSection}>
 
-          <div className={styles.footer}>
+            <div className={styles.footer}>
 
-              <div className={styles.aboutBlurb}>
-                <p className={styles.wordHighlightPassion}>Hello There!</p>
-                <p>trinityevansphoto@gmail.com</p>
-                <p>This website is best viewed on desktop</p>
-                <p>Made by Trinity Evans </p>
-              </div>
+                <div className={styles.footerBlurb}>
+                  <p className={styles.wordHighlightClickMe}>Hello There!</p>
 
+                  <p>This website is best viewed on a desktop!</p>
+                  <br/>
+                  <p>Email me at trinityevansphoto@gmail.com</p>
+                  <p>Made by Trinity Evans </p>
+                  <br/>
+                </div>
+                <div className={styles.footerLinks}>
+                  <div>
+                    <a title="GitHub" target="_blank" href="https://github.com/trinception" rel="noopener noreferrer" >GitHub</a>
+                  </div>
+
+                  <div>
+                    <a target="_blank" href="https://www.linkedin.com/in/trinity-e-b633812b4" rel="noopener noreferrer" >LinkedIn</a>
+                  </div>
+
+                  <div>
+                    <a href="/contact">  Contact</a>
+                  </div>
+                </div>
+
+            </div>
           </div>
         </div>
 

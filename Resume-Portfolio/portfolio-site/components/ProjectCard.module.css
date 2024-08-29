@@ -1,0 +1,117 @@
+.bold{
+  font-weight: bold;
+}
+
+.card {
+  padding: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+  transition: max-height 0.3s ease-out;
+  text-align: left;
+  overflow:hidden;
+
+  position: relative;
+  max-height: 200px;
+}
+
+.card span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.card h2 {
+  font-family: var(--font-sans-serif);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  font-size: 24px;
+}
+
+.card h4 {
+  font-family: var(--font-sans-serif);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card p {
+
+  opacity: 0.6;
+  font-size: 1rem;
+  text-wrap: balance;
+  margin-bottom: 0.7rem;
+}
+
+.card.expanded {
+  height:auto;
+  max-height: 1000px;
+}
+
+.viewMore {
+  display: none;
+}
+
+.card.expanded .viewMore {
+  display: block;
+}
+
+.expand {
+  cursor: pointer;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.card.expanded .arrow {
+  transform: rotate(180deg);
+}
+
+.project{
+  max-width: 100%;
+  max-height:100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectDescription{
+  position:relative;
+  padding:0px 0px;
+}
+
+.projectDescription::before{
+  position:absolute;
+  content:"";
+  width:100%;
+  height:100%;
+  background-image: linear-gradient(to bottom, transparent, var(--dimension));
+  opacity: 1;
+  transition: .8s;
+}
+
+.seeMore {
+  position: relative;
+  color: #333;
+  text-align: center;
+  filter:brightness(100%);
+  transition: .4s;
+}
+
+.seeMore:hover{
+  filter: brightness(80%);
+  scale: 1.1;
+
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+}
