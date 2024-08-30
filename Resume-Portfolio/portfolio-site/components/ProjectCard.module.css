@@ -16,7 +16,7 @@
   overflow:hidden;
 
   position: relative;
-  max-height: 200px;
+  max-height: 400px;
 }
 
 .card span {
@@ -37,7 +37,7 @@
   font-size: 14px;
 }
 
-.card p {
+.card p::before{
 
   opacity: 0.6;
   font-size: 1rem;
@@ -51,10 +51,12 @@
 }
 
 .viewMore {
+  padding: 0px;
   display: none;
 }
 
 .card.expanded .viewMore {
+  padding: 0px;
   display: block;
 }
 
@@ -81,6 +83,7 @@
 .projectDescription{
   position:relative;
   padding:0px 0px;
+  padding-bottom: 4rem;
 }
 
 .projectDescription::before{
@@ -88,13 +91,29 @@
   content:"";
   width:100%;
   height:100%;
-  background-image: linear-gradient(to bottom, transparent, var(--dimension));
+
   opacity: 1;
   transition: .8s;
 }
 
-.seeMore {
+.projectImage{
+  display: grid;
+  margin: auto;
+  min-width: 200px;
+  min-height: 200px;
+  width:100%;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  overflow:hidden;
+}
+
+.seeMore {
+  position: absolute;
+  bottom: 1rem;
+  left:10%;
+  background: var(--dimension);
+  background-image: linear-gradient(to bottom, transparent, var(--dimension));
   color: #333;
   text-align: center;
   filter:brightness(100%);
@@ -102,9 +121,22 @@
 }
 
 .seeMore:hover{
-  filter: brightness(80%);
   scale: 1.1;
 
+}
+
+.seeMoreContainer {
+  position: absolute;
+  width:100%;
+  height:6rem;
+  bottom: 0;
+  left:0;
+
+  background-image: linear-gradient(to bottom, transparent, var(--dimension) 60%);
+  color: #333;
+  text-align: center;
+  filter:brightness(100%);
+  transition: .4s;
 }
 
 /* Enable hover only on non-touch devices */

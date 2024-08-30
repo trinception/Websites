@@ -6,6 +6,14 @@
   min-height: 100vh;
 }
 
+.botSection{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, auto));
+  max-width: 100%;
+  height:100%;
+  width: var(--max-width);
+}
+
 .current {
 
       margin: 2em;
@@ -20,8 +28,8 @@
 .imageContainer {
   display: grid;
   margin: auto;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 250px;
+  min-height: 250px;
   width:75%;
   padding: 10px;
   justify-content: center;
@@ -64,6 +72,7 @@
 }
 
 .nameIcon{
+  width:65%;
   left: 0;
   /*color: transparent;*/
   background-color: #000000;
@@ -128,6 +137,11 @@
   width: var(--max-width);
 }
 
+.aboutBlurb p{
+  align-items: center;
+  justify-content: center;
+}
+
 .footerContainer {
   width:100%;
   display: grid flex;
@@ -171,14 +185,37 @@
   position: relative;
   color: var(--shadow);
 }
+
+.sectionContainer{
+  width:100%;
+  background: var(--dimension);
+}
+
 .section{
   width:65%;
   margin: auto;
   padding-bottom: 6rem;
-  align-items: center;
-  justify-content: center;
   display: flex;
   gap: 50px;
+}
+.section1{
+  width:65%;
+  margin: auto;
+  padding-bottom: 6rem;
+  gap: 50px;
+}
+
+.titlePicContainer{
+  display: grid;
+  margin: auto;
+  height: auto;
+  margin-left: 20px;
+  grid-row: auto auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  line-height: 30px;
+  overflow: hidden;
 }
 
 .wordHighlightPassion{
@@ -268,8 +305,15 @@
   }
 
   .footerLinks{
-    align-items: center;
-    justify-content: center;
+      display: block;
+      margin: auto;
+      height: auto;
+      margin-left: 0px;
+      grid-row: auto auto;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: var(--shadow);
 
     margin-right: 1rem;
   }
@@ -298,6 +342,10 @@
 /* Tablet */
 @media (min-width: 600px) and (max-width: 800px){
 
+  .aboutBlurb{
+    display:block;
+  }
+
   .footer{
     display: block;
   }
@@ -314,4 +362,11 @@
     margin-left: 10px;
   }
 
+}
+
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
 }

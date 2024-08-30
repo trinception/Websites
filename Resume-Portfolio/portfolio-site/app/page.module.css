@@ -365,6 +365,7 @@
   transition: .8s;
 }
 
+
 .projectSection {
   margin:auto;
   align-items: center;
@@ -410,6 +411,7 @@
 
 .seeMore {
   position: relative;
+  background-image: linear-gradient(to bottom, transparent, var(--dimension));
   color: #333;
   text-align: center;
   filter:brightness(100%);
@@ -719,8 +721,15 @@
   }
 
   .footerLinks{
-    align-items: center;
-    justify-content: center;
+      display: block;
+      margin: auto;
+      height: auto;
+      margin-left: 0px;
+      grid-row: auto auto;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: var(--shadow);
 
     margin-right: 1rem;
   }

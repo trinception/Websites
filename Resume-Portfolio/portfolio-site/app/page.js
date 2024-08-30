@@ -146,6 +146,7 @@ export default function Home() {
               <ul className={styles.grid}>
 
                 <ProjectCard project={{
+                        src:"./imgs/website.png",
                         title: "Portfolio Website",
                         languages: "HTML, CSS, JS, PHP",
                         technologies: "NextJS, React, Bootstrap",
@@ -154,28 +155,32 @@ export default function Home() {
                       }} />
 
                 <ProjectCard project={{
+                        src:"./imgs/website.png",
                         title: "Book Recommendation System",
                         languages: "Python",
                         technologies: "Amazon API, Goodreads API",
-                        description: "Developed a collaborative filtering recommendation system in Python, leveraging existing book  rating databases, processed using Pandas, and implementing",
-                        fullDescription: "a user database using SQL. Currently enhancing the project by creating a web-based front-end to offer users more interactive features."
+                        description: "Developed a collaborative filtering recommendation system in Python, leveraging existing book  rating databases, processed using Pandas, and implementing a user database using SQL. Currently enhancing the project by creating a web-based front-end to offer users more interactive features.",
+                        fullDescription: ""
                       }} />
 
                 <ProjectCard project={{
+                        src:"./imgs/website.png",
                         title: "(Research) The ContEgo Salsa Dataset",
                         languages: "hsl",
                         technologies: "Vicon Shogun Live, Vicon Shogun Post, Blender",
-                        description: "Co-authored motion capture dataset of salsa dancers from various levels (beginner, intermediate, professional) improvising over a ",
-                        fullDescription: "variety of different music styles and tempos. \n Current uses: Training ML Motion Style Transfer algorithms for use in technologies such as generative AI. \n Potential uses/applications: Gaming, TV, & Movies (generating realistic CGI character movement), Dance training and evaluation, etc. \n About my role: Co-author. Set up and calibrated our motion capture lab space, managed software migration and maintained our usage of the most modern software possible, perfected our data collection pipeline, ran participant recruitment and scheduling, and performed the actual data collection."
+                        description: (<>Co-authored motion capture dataset of salsa dancers from various levels (beginner, intermediate, professional) improvising over a variety of different music styles and tempos. <br/> Current uses: Training ML Motion Style Transfer algorithms for use in technologies such as generative AI.
+                        <br/> Potential uses/applications: Gaming, TV, & Movies (generating realistic CGI character movement), Dance training and evaluation, etc. <br/> About my role: Co-author. Set up and calibrated our motion capture lab space, managed software migration and maintained our usage of the most modern software possible, perfected our data collection pipeline, ran participant recruitment and scheduling, and performed the actual data collection.</>),
+                        fullDescription: ""
                       }} />
 
 
                 <ProjectCard project={{
+                        src:"./imgs/website.png",
                         title: "Full-Stack Multi-user gaming site",
                         languages: "HTML, CSS, JavaScript, SQL",
                         technologies: "Heroku, Socket.io, NodeJS, PostGreSQL",
-                        description: "Developed a full stack web-based racing game application allowing users to create profiles, add friends, engage in real-time chat, and compete against",
-                        fullDescription: "each other. Implemented using JavaScript for frontend interactivity, HTML/CSS for styling, Node.js for server-side logic, PostgreSQL for database management, and Socket.IO for real-time communication. Successfully integrated multiple technologies to deliver an immersive gaming experience with social interaction features."
+                        description: "Developed a full stack web-based racing game application allowing users to create profiles, add friends, engage in real-time chat, and compete against each other. Implemented using JavaScript for frontend interactivity, HTML/CSS for styling, Node.js for server-side logic, PostgreSQL for database management, and Socket.IO for real-time communication. Successfully integrated multiple technologies to deliver an immersive gaming experience with social interaction features.",
+                        fullDescription: ""
                       }} />
               </ul>
 

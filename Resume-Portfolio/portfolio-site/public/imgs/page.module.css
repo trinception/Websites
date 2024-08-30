@@ -523,15 +523,8 @@
   }
 
   .footerLinks{
-      display: block;
-      margin: auto;
-      height: auto;
-      margin-left: 0px;
-      grid-row: auto auto;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      color: var(--shadow);
+    align-items: center;
+    justify-content: center;
 
     margin-right: 1rem;
   }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from 'next/link';
 
 import styles from "./page.module.css";
+import ProjectCard from "../../components/ProjectCard";
 
 export default function Home() {
   return (
@@ -74,132 +75,75 @@ export default function Home() {
             <ul className={styles.grid}>
 
 
-              <li className={styles.card}>
+                      <ProjectCard project={{
+                          src:"./imgs/website.png",
+                          title: "Map Navigation System",
+                          languages: "Python",
+                          technologies: "OpenStreetMap Data",
+                          description: "Built my portfolio website from scratch. Includes interactive, dynamic elements, and a variety of unique features and easter eggs such as an AI chatbot.",
+                          fullDescription: ""
+                        }} />
+                      <ProjectCard project={{
+                          src:"./imgs/website.png",
+                          title: "PortfolioGPT",
+                          languages: "HTML, CSS, JS",
+                          technologies: "Microsoft Azure",
+                          description: "Built my portfolio website from scratch. Includes interactive, dynamic elements, and a variety of unique features and easter eggs such as an AI chatbot.",
+                          fullDescription: ""
+                        }} />
+                      <ProjectCard project={{
+                          src:"./imgs/website.png",
+                          title: "Lockdown Python Scraper",
+                          languages: "Python, PHP",
+                          technologies: "BeautifulSoup, Selenium",
+                          description: "Built my portfolio website from scratch. Includes interactive, dynamic elements, and a variety of unique features and easter eggs such as an AI chatbot.",
+                          fullDescription: ""
+                        }} />
+                      <ProjectCard project={{
+                          src:"./imgs/prompt.png",
+                          title: "Multi-level 2D Platform Game \"Atmosphere\"",
+                          languages: "Java, Processing",
+                          technologies: "",
+                          description: "Built my portfolio website from scratch. Includes interactive, dynamic elements, and a variety of unique features and easter eggs such as an AI chatbot.",
+                          fullDescription: ""
+                        }} />
 
-                  <div className={styles.project1}>
-                    <h2>Map navigation system</h2>
-                    <p></p>
-                  </div>
+                        <ProjectCard project={{
+                                src:"./imgs/website.png",
+                                title: "Portfolio Website",
+                                languages: "HTML, CSS, JS, PHP",
+                                technologies: "NextJS, React, Bootstrap",
+                                description: "Built my portfolio website from scratch. Includes interactive, dynamic elements, and a variety of unique features and easter eggs such as an AI chatbot.",
+                                fullDescription: ""
+                              }} />
 
-              </li>
+                        <ProjectCard project={{
+                                src:"./imgs/website.png",
+                                title: "Book Recommendation System",
+                                languages: "Python",
+                                technologies: "Amazon API, Goodreads API",
+                                description: "Developed a collaborative filtering recommendation system in Python, leveraging existing book  rating databases, processed using Pandas, and implementing a user database using SQL. Currently enhancing the project by creating a web-based front-end to offer users more interactive features.",
+                                fullDescription: ""
+                              }} />
 
-              <li className={styles.card}>
-
-                  <div className={styles.project1}>
-                    <h2>PortfolioGPT</h2>
-                    <p></p>
-                  </div>
-
-              </li>
-
-              <li className={styles.card}>
-
-                  <div className={styles.project1}>
-                    <h2>Lockdown Python Scraper</h2>
-                    <p></p>
-                  </div>
-
-              </li>
-
-              <li className={styles.card}>
-
-                  <div className={styles.project1}>
-                    <h2>Multi-level 2D Platform Game "Atmosphere"</h2>
-                    <p></p>
-                  </div>
-
-              </li>
-              <li className={styles.card}>
-
-                  <div className={styles.project1}>
-                    <h2>Portfolio Websites</h2>
-                    <h4><a className={styles.bold}>Languages:</a> HTML, CSS, JS, PHP</h4>
-                    <h4><a className={styles.bold}>Technologies:</a> NextJS, React, Bootstrap</h4>
-                    <p className={styles.projectDescription}> Built my portfolio website from scratch. Includes interactive, dynamic elements, and a variety of unique features and easter eggs such as an AI chatbot.</p>
-
-                  </div>
-
-                  <div className={styles.expand}>
-                    <div className={styles.seeMore}>
-                      <strong>Read more...</strong>
-                      <a className={styles.arrow}>&#709;</a>
-                    </div>
-                  </div>
-
-              </li>
-
-              <li className={styles.card}>
-
-                <div className={styles.project1}>
-                  <h2>Book Recommendation System</h2>
-                  <h4><a className={styles.bold}>Language(s):</a> Python</h4>
-                  <h4><a className={styles.bold}>Data source(s):</a> Amazon API, Goodreads API</h4>
-                  <p className={styles.projectDescription}>Developed a collaborative filtering recommendation system in Python, leveraging existing book  rating databases, processed using Pandas, and implementing </p>
-                </div>
-
-                <div className={styles.expand}>
-                  <div className={styles.seeMore}>
-                    <strong>Read more...</strong>
-                    <a className={styles.arrow}>&#709;</a>
-                  </div>
-                </div>
-
-                <span className={styles.viewMore}> a user database using SQL. Currently enhancing the
-                  project by creating a web-based front-end to offer users more interactive features.</span>
-
-              </li>
-
-              <li className={styles.card}>
+                        <ProjectCard project={{
+                                src:"./imgs/website.png",
+                                title: "(Research) The ContEgo Salsa Dataset",
+                                languages: "hsl",
+                                technologies: "Vicon Shogun Live, Vicon Shogun Post, Blender",
+                                description: "Co-authored motion capture dataset of salsa dancers from various levels (beginner, intermediate, professional) improvising over a variety of different music styles and tempos. \n Current uses: Training ML Motion Style Transfer algorithms for use in technologies such as generative AI. \n Potential uses/applications: Gaming, TV, & Movies (generating realistic CGI character movement), Dance training and evaluation, etc. \n About my role: Co-author. Set up and calibrated our motion capture lab space, managed software migration and maintained our usage of the most modern software possible, perfected our data collection pipeline, ran participant recruitment and scheduling, and performed the actual data collection.",
+                                fullDescription: ""
+                              }} />
 
 
-                  <div className={styles.project1}>
-                    <h2>(Research) The ContEgo Salsa Dataset</h2>
-                    <p className={styles.projectDescription}>
-                    Co-authored motion capture dataset of salsa dancers from various levels (beginner, intermediate, professional) improvising over a </p>
-                  </div>
-
-                  <div className={styles.expand}>
-                    <div className={styles.seeMore}>
-                      <strong>Read more...</strong>
-                      <a className={styles.arrow}>&#709;</a>
-                    </div>
-                  </div>
-                  <span className={styles.viewMore}>variety of different music styles and tempos.
-                  <br/>
-                  <a className={styles.bold}>Current uses:</a> Training ML Motion Style Transfer algorithms for use in technologies such as generative AI.
-                  <br/>
-                  <a className={styles.bold}>Potential uses/applications:</a> Gaming, TV, & Movies (generating realistic CGI character movement), Dance training and evaluation, etc.
-                  <br/>
-                  <a className={styles.bold}>About my role:</a> Co-author. Set up and calibrated our motion capture lab space, managed software migration and maintained our usage of the most modern software possible, perfected our data collection pipeline, ran participant recruitment and scheduling, and performed the actual data collection.</span>
-
-
-              </li>
-
-              <li className={styles.card}>
-
-                  <div className={styles.project1}>
-                    <h2>Multi-user gaming site</h2>
-                    <h4><a className={styles.bold}>Languages:</a> HTML, CSS, JavaScript, SQL</h4>
-                    <h4><a className={styles.bold}>Technologies:</a> Heroku, Socket.io, NodeJS, PostGreSQL</h4>
-                    <p className={styles.projectDescription}>Developed a full stack web-based racing game application allowing users to create profiles, add friends,
-                      engage in real-time chat, and compete against
-                      </p>
-                  </div>
-
-                  <div className={styles.expand}>
-                    <div className={styles.seeMore}>
-                      <strong>Read more...</strong>
-                      <a className={styles.arrow}>&#709;</a>
-                    </div>
-                  </div>
-
-                  <span className={styles.viewMore}>
-                   each other. Implemented using JavaScript for frontend interactivity, HTML/CSS for styling, Node.js for server-side logic, PostgreSQL for database management, and
-                  Socket.IO for real-time communication. Successfully integrated multiple technologies to deliver an immersive
-                  gaming experience with social interaction features.
-                  </span>
-
-              </li>
+                        <ProjectCard project={{
+                                src:"./imgs/website.png",
+                                title: "Full-Stack Multi-user gaming site",
+                                languages: "HTML, CSS, JavaScript, SQL",
+                                technologies: "Heroku, Socket.io, NodeJS, PostGreSQL",
+                                description: "Developed a full stack web-based racing game application allowing users to create profiles, add friends, engage in real-time chat, and compete against each other. Implemented using JavaScript for frontend interactivity, HTML/CSS for styling, Node.js for server-side logic, PostgreSQL for database management, and Socket.IO for real-time communication. Successfully integrated multiple technologies to deliver an immersive gaming experience with social interaction features.",
+                                fullDescription: ""
+                              }} />
 
             </ul>
 
